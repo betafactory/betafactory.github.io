@@ -12,7 +12,22 @@
         <link rel="stylesheet" href="css/custom.css">
         <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
         <link rel="shortcut icon" href="favicon.ico">
+        <script>
+          window.CommunityInviterAsyncInit = function () {
+            CommunityInviter.init({
+              app_url:'beta-factory',
+              team_id:'thebetafactory'
+           })
+          };
 
+          (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://communityinviter.com/js/communityinviter.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'Community_Inviter'));
+        </script>
     </head>
 
     <body>
@@ -67,14 +82,12 @@
                     </div>
                 </div>
             </section>
-
-        </div>
-        <div class="container os-banner">
-            <p>Celebrating <b>Hacktoberfest</b> 2019 | Come Help Us Slay</p>
-            <a href="https://hacktoberfest.digitalocean.com" target="_blank"><img class="os-banner-image" src="img/hacktoberfest.png"></a>
-        </div>
-
-        
+            <div class="container os-banner">
+                <p>Celebrating <b>Hacktoberfest</b> 2019 | Come Help Us Slay</p>
+                <a href="https://hacktoberfest.digitalocean.com" target="_blank"><img class="os-banner-image" src="img/hacktoberfest.png"></a>
+            </div>
+            <div id="CommunityInviter"></div>  
+        </div>                        
     </main>
 
     <footer class="pt2 pb2">
